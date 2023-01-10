@@ -8,15 +8,15 @@ const parser = require('csv-parser');
 // ================ CONFIGURATION PARAMS ===================================
 // -- PORT --
 // const port = 8888;
-// const port = 30000; // ESTE ES EL PUERTO DEL SERVICIO NODEPORT EN EL QUE ESTÁ EL POD DEL SERVER, PARA RECIBIR TRAMAS
-const port = 10002;
+const port = 30000; // ESTE ES EL PUERTO DEL SERVICIO NODEPORT EN EL QUE ESTÁ EL POD DEL SERVER, PARA RECIBIR TRAMAS
+// const port = 10002;
 
 // -- IP SERVER -- (Sustituir por la ip local o pública de la raspi)
 // const server_URL = "127.0.0.1"
 // const server_URL = "raspberrypi.local"
-// const server_URL = "158.42.89.254" // ESTA ES LA IP DE LA RASPI EN LA RED LOCAL
-// const server_URL = "192.168.10.244"
-const server_URL = "e110eldi.upct.es"
+const server_URL = "158.42.89.254" // ESTA ES LA IP DE LA RASPI EN LA RED LOCAL
+    // const server_URL = "192.168.10.244"
+    // const server_URL = "e110eldi.upct.es"
 
 // Al final las tramas deben de recibirse en la ip de la raspberry, en el puerto 30000
 
