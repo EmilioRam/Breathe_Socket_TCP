@@ -3,7 +3,7 @@ const net = require('net');
 
 // Configuración ===================================
 // const port = 8888;
-const port = 30000;
+const port = 10002;
 //=================================================
 
 //================= Client 1 ==========================
@@ -11,7 +11,10 @@ const port = 30000;
 const client1 = new net.Socket();
 
 // const server_URL = "127.0.0.1"
-const server_URL = "raspberrypi.local"
+//const server_URL = "raspberrypi.local"
+// const server_URL = "158.42.89.254"
+// const server_URL = "192.168.10.244"
+const server_URL = "e110eldi.upct.es"
 
 // Conexión al server en el puerto configurado
 client1.connect(port, server_URL, function() {
@@ -28,7 +31,7 @@ client1.connect(port, server_URL, function() {
 
     // TRAMA EN JSON
     let obj_datos = {
-        VALID_DATA: 127,
+        VALID_DATA: 255, //Especifica en binario los campos que serán válidos a 1 (PM, CO, NO2, SO2, O3, TEMP/HUM, CO2, GPS)
         PARTICLES_1: 35.7,
         PARTICLES_2_5: 158.5,
         PARTICLES_4: 69.8,

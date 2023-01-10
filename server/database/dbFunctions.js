@@ -14,7 +14,8 @@ const dbConnect = () => {
             user: process.env.USER_DB,
             password: process.env.PASS_DB,
             database: process.env.DATABASE,
-            connectTimeout: 5000
+            connectTimeout: 15000,
+            port: process.env.PORT_DB
         });
 
 
@@ -24,7 +25,7 @@ const dbConnect = () => {
                 console.error(`error connecting to DB: ${err.stack}`.red);
                 //throw new Error(`error connecting to DB: ${err.stack}`.red)
                 connection.destroy();
-                setTimeout(attemptConnection, 5000)
+                setTimeout(attemptConnection, 15000)
             } else {
                 console.log(`connected as id ${connection.threadId} to database ${process.env.DATABASE}`.green);
             }

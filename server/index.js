@@ -62,6 +62,7 @@ const { dbConnect, storeDb } = require('./database/dbFunctions.js');
 // Importar config para variables de entorno con dotenv (solo para desarrollo)
 require('dotenv').config();
 
+
 // ==============Config auxiliar para comprobaciones con variables de entorno==========
 // Estructura de datos configurada.
 const dataStructure = JSON.parse(process.env.DATA_STRUCTURE);
@@ -82,12 +83,6 @@ const port = process.env.PORT;
 
 // Creación de una instancia del servidor y asociación del callback de resolución de clientes
 const server = net.createServer(onClientConnection);
-
-// function sleep(ms) {
-//     return new Promise((resolve) => {
-//         setTimeout(resolve, ms);
-//     });
-// }
 
 // Start listening on given port and host.
 server.listen(port, function() {
